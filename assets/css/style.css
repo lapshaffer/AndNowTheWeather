@@ -3,5 +3,10 @@
 - Style buttons in recent searches
 - Style current and future forecasts
 - Positioning
-- Colors for UV index
+- Colors for UV index */
 
+h1 {
+    color: white;
+    background-image: linear-gradient(to right, purple , black);
+    text-align: center;
+}
