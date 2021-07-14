@@ -1,12 +1,6 @@
 <!-- TO-DO:
 - Link to OpenWeather API https://openweathermap.org/api/one-call-api
-- Link to fontawesome for icons?
-- Link to Bootstrap, jQuery, local files
-- Add header
-- Pull a search box from Bootstrap?
-- Create a container for recent searches
-- Create a container to hold current forecast
-- Create columns to hold future forecasts-->
+- Link to fontawesome for icons?-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +25,7 @@
                     <div class="form-outline">
                       <input type="search" id="form1" class="form-control" />
                     </div>
-                    <button type="button" class="btn btn-primary">
+                    <button type="button" class="btn btn-primary" id="save-btn">
                       <i class="fas fa-search"></i>
                     </button>
                   </div>
@@ -41,8 +35,9 @@
                 <h2>Current Weather</h2>
                 <div class="container">
                     <h5 id="cityDate"></h5>
+                    <img id="currentEmoji">
                     <p>Temperature: <span id="temp"></span></p>
-                    <p>Wind: <span id="wind"></span></p>
+                    <p>Wind Speed: <span id="wind"></span></p>
                     <p>Humidity: <span id="humidity"></span></p>
                     <p>UV Index: <span id="uv uvColor"></span></p>
                 </div>
@@ -55,7 +50,7 @@
     <div class= "container">
         <div class="row">
             <!--Recent Searches-->
-            <div class="col recent">
+            <div class="col" id="recent">
                 <h4>Recent searches</h4>
                 <div class="container"></div>
             </div>
