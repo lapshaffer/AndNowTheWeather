@@ -2,7 +2,6 @@
 - Link to OpenWeather API https://openweathermap.org/api/one-call-api
 - Link to fontawesome for icons?
 - Link to Bootstrap, jQuery, local files
-- Might need moment for the current date and time?
 - Add header
 - Pull a search box from Bootstrap?
 - Create a container for recent searches
@@ -25,19 +24,82 @@
 
     <div class="container">
         <div class="row">
-            <div class="col search">Search for your City</div> <!--Search-->
-            <div class="col current-weather">Current Weather</div> <!--Results-->
+            <!--Search-->
+            <div class="col-4 search">
+                <h2>Search for your city</h2>
+                <div class="input-group">
+                    <div class="form-outline">
+                      <input type="search" id="form1" class="form-control" />
+                    </div>
+                    <button type="button" class="btn btn-primary">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+            </div> 
+            <!--Results-->
+            <div class="col-8 current-weather">
+                <h2>Current Weather</h2>
+                <div class="container">
+                    <h5 id="cityDate"></h5>
+                    <p>Temperature: <span id="temp"></span></p>
+                    <p>Wind: <span id="wind"></span></p>
+                    <p>Humidity: <span id="humidity"></span></p>
+                    <p>UV Index: <span id="uv uvColor"></span></p>
+                </div>
+            </div>
         </div>
     </div> 
 
+    <h4 id="fiveDay">5-day forecast</h4>
+
     <div class= "container">
         <div class="row">
-            <div class="col recent">Recent Searches</div> <!--Recent Searches-->
-            <div class="col forecast">1</div> <!--Future Forecasts-->
-            <div class="col forecast">2</div>
-            <div class="col forecast">3</div>
-            <div class="col forecast">4</div>
-            <div class="col forecast">5</div>
+            <!--Recent Searches-->
+            <div class="col recent">
+                <h4>Recent searches</h4>
+                <div class="container"></div>
+            </div>
+            <!--Future Forecasts--> 
+            <div class="col forecast">
+                <div class="container">
+                    <h5 id="date1"></h5>
+                    <p>Temperature: <span id="temp1"></span></p>
+                    <p>Wind: <span id="wind1"></span></p>
+                    <p>Humidity: <span id="humidity1"></span></p>
+                </div>
+            </div> 
+            <div class="col forecast">
+                <div class="container">
+                    <h5 id="date2"></h5>
+                    <p>Temperature: <span id="temp2"></span></p>
+                    <p>Wind: <span id="wind2"></span></p>
+                    <p>Humidity: <span id="humidity2"></span></p>
+                </div>
+            </div>
+            <div class="col forecast">
+                <div class="container">
+                    <h5 id="date3"></h5>
+                    <p>Temperature: <span id="temp3"></span></p>
+                    <p>Wind: <span id="wind3"></span></p>
+                    <p>Humidity: <span id="humidity3"></span></p>
+                </div>
+            </div>
+            <div class="col forecast">
+                <div class="container">
+                    <h5 id="date4"></h5>
+                    <p>Temperature: <span id="temp4"></span></p>
+                    <p>Wind: <span id="wind4"></span></p>
+                    <p>Humidity: <span id="humidity4"></span></p>
+                </div>
+            </div>
+            <div class="col forecast">
+                <div class="container">
+                    <h5 id="date5"></h5>
+                    <p>Temperature: <span id="temp5"></span></p>
+                    <p>Wind: <span id="wind5"></span></p>
+                    <p>Humidity: <span id="humidity5"></span></p>
+                </div>
+            </div>
         </div>
     </div> 
     

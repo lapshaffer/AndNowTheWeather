@@ -10,3 +10,12 @@
     // Pull specific data: the date (may need Moment), an icon representation of weather conditions(fontawesome), the temperature, the humidity, the wind speed, and the UV index
     // When pulling today's date, also pull data for the next 5 days
     // UV Index coloration
+
+var searchBar = document.querySelector('input-group');
+var cityDate = document.querySelector('cityDate');
+var currentTemp = document.querySelector('temp');
+var currentWind = document.querySelector('wind');
+var currenthumidity = document.querySelector('humidity');
+var currentUV = document.querySelector('uv')
+
+    

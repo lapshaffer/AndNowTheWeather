@@ -1,12 +1,34 @@
 /* TO-DO:
-- Style header
+- Style header: DONE
 - Style buttons in recent searches
 - Style current and future forecasts
-- Positioning
+- Positioning: DONE
 - Colors for UV index */
 
 h1 {
     color: white;
     background-image: linear-gradient(to right, purple , black);
     text-align: center;
+}
+
+.col {
+    border-width: 3px;
+    border-style: solid;
+    border-color: thistle;
+    margin: 5px;
+}
+
+.col-8 {
+    border-width: 3px;
+    border-style: solid;
+    border-color: thistle;
+}
+
+#fiveDay {
+    text-align: center;
+}
+
+#uvColor {
+    color: white;
+    background-color: green;
 }
