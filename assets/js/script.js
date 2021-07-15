@@ -2,7 +2,6 @@
     // Local storage only being stored per session
     // Upon second button click, new city is added to string rather than on its own line
     // Upon second button click, second emoji is appended after first, leaving two emojis
-    // Dates currently listed as Unix codes
 
 var searchBar = document.querySelector('#input-group');
 var citySearch = document.querySelector('#form1')
@@ -177,4 +176,5 @@ function getForecast(city) {
     });
 };
 
+// Runs all functions on save button click
 saveBtn.addEventListener('click', handleSearchFormSubmit);
