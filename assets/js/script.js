@@ -15,10 +15,10 @@
 
 var searchBar = document.querySelector('#input-group');
 var citySearch = document.querySelector('#form1')
-var cityDate = document.querySelector('#cityDate');
+var cityName = document.querySelector('#city');
 var currentTemp = document.querySelector('#temp');
 var currentWind = document.querySelector('#wind');
-var currenthumidity = document.querySelector('#humidity');
+var currentHumidity = document.querySelector('#humidity');
 var currentUV = document.querySelector('#uv');
 var recentSearches = document.querySelector('#recent');
 
@@ -48,6 +48,8 @@ saveBtn.addEventListener("click", function(event) {
     // When a city is entered, the weather data for that city is pulled and displayed on the screen
     // Event listener for button
     // Fetch requests to OpenWeather API
+
+// retrieves current weather data
 function handleSearchFormSubmit(event) {
     event.preventDefault();
     citySearch = document.querySelector('#form1').value;
@@ -61,9 +63,15 @@ function handleSearchFormSubmit(event) {
         console.log(data);
         getUVI(data.coord.lat, data.coord.lon);
         getForecast(citySearch);
+
+        cityName.innerHTML = data.name;
+        currentTemp.innerHTML = data.main.temp;
+        currentWind.innerHTML = data.wind.speed;
+        currentHumidity.innerHTML = data.main.humidity;
     });
 };
 
+// retrieve UVI data
 function getUVI(lat, lon) {
     console.log(lat, lon);
     uviURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
@@ -72,9 +80,11 @@ function getUVI(lat, lon) {
     })
     .then(function (data) {
         console.log(data);
+        currentUV.innerHTML = data.current.uvi;
     });
 };
 
+// retrieve forecast data
 function getForecast(city) {
     console.log(city);
     forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearch + "&appid=" + apiKey;
