@@ -1,7 +1,6 @@
 // Current fixes needed! -
     // Local storage only being stored per session
     // Upon second button click, new city is added to string rather than on its own line
-    // Upon second button click, second emoji is appended after first, leaving two emojis
 
 var searchBar = document.querySelector('#input-group');
 var citySearch = document.querySelector('#form1')
@@ -62,6 +61,7 @@ function handleSearchFormSubmit(event) {
 
         var emoji = document.createElement('img');
         emoji.src = "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png"
+        document.getElementById('currentEmoji').innerHTML = " ";
         document.getElementById('currentEmoji').appendChild(emoji); 
     });
 };
@@ -109,7 +109,8 @@ function getForecast(city) {
         var forecastHumidity1 = document.querySelector("#humidity1");
 
         var forecastEmoji1 = document.createElement('img');
-        forecastEmoji1.src = "http://openweathermap.org/img/wn/" + data.list[5].weather[0].icon + "@2x.png"
+        forecastEmoji1.src = "http://openweathermap.org/img/wn/" + data.list[5].weather[0].icon + "@2x.png";
+        document.getElementById('emoji1').innerHTML = " ";
         document.getElementById('emoji1').appendChild(forecastEmoji1);
 
         forecastDate1.innerHTML = moment.unix(data.list[5].dt).format("dddd, MMMM Do YYYY");
@@ -123,7 +124,8 @@ function getForecast(city) {
         var forecastHumidity2 = document.querySelector("#humidity2");
 
         var forecastEmoji2 = document.createElement('img');
-        forecastEmoji2.src = "http://openweathermap.org/img/wn/" + data.list[13].weather[0].icon + "@2x.png"
+        forecastEmoji2.src = "http://openweathermap.org/img/wn/" + data.list[13].weather[0].icon + "@2x.png";
+        document.getElementById('emoji2').innerHTML = " ";
         document.getElementById('emoji2').appendChild(forecastEmoji2);
 
         forecastDate2.innerHTML = moment.unix(data.list[13].dt).format("dddd, MMMM Do YYYY");
@@ -137,7 +139,8 @@ function getForecast(city) {
         var forecastHumidity3 = document.querySelector("#humidity3");
 
         var forecastEmoji3 = document.createElement('img');
-        forecastEmoji3.src = "http://openweathermap.org/img/wn/" + data.list[21].weather[0].icon + "@2x.png"
+        forecastEmoji3.src = "http://openweathermap.org/img/wn/" + data.list[21].weather[0].icon + "@2x.png";
+        document.getElementById('emoji3').innerHTML = " ";
         document.getElementById('emoji3').appendChild(forecastEmoji3);
 
         forecastDate3.innerHTML = moment.unix(data.list[21].dt).format("dddd, MMMM Do YYYY");
@@ -151,7 +154,8 @@ function getForecast(city) {
         var forecastHumidity4 = document.querySelector("#humidity4");
 
         var forecastEmoji4 = document.createElement('img');
-        forecastEmoji4.src = "http://openweathermap.org/img/wn/" + data.list[29].weather[0].icon + "@2x.png"
+        forecastEmoji4.src = "http://openweathermap.org/img/wn/" + data.list[29].weather[0].icon + "@2x.png";
+        document.getElementById('emoji4').innerHTML = " ";
         document.getElementById('emoji4').appendChild(forecastEmoji4);
 
         forecastDate4.innerHTML = moment.unix(data.list[29].dt).format("dddd, MMMM Do YYYY");
@@ -165,7 +169,8 @@ function getForecast(city) {
         var forecastHumidity5 = document.querySelector("#humidity5");
 
         var forecastEmoji5 = document.createElement('img');
-        forecastEmoji5.src = "http://openweathermap.org/img/wn/" + data.list[37].weather[0].icon + "@2x.png"
+        forecastEmoji5.src = "http://openweathermap.org/img/wn/" + data.list[37].weather[0].icon + "@2x.png";
+        document.getElementById('emoji5').innerHTML = " ";
         document.getElementById('emoji5').appendChild(forecastEmoji5);
 
         forecastDate5.innerHTML = moment.unix(data.list[37].dt).format("dddd, MMMM Do YYYY");
