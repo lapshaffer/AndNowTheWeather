@@ -56,7 +56,7 @@ function handleSearchFormSubmit(event) {
         getUVI(data.coord.lat, data.coord.lon);
         getForecast(citySearch);
 
-        cityName.innerHTML = data.name + " " + data.dt;
+        cityName.innerHTML = data.name + " on " + moment.unix(data.dt).format("dddd, MMMM Do YYYY");
         currentTemp.innerHTML = data.main.temp + " °F";
         currentWind.innerHTML = data.wind.speed + " mph";
         currentHumidity.innerHTML = data.main.humidity + " %";
@@ -110,13 +110,13 @@ function getForecast(city) {
         var forecastHumidity1 = document.querySelector("#humidity1");
 
         var forecastEmoji1 = document.createElement('img');
-        forecastEmoji1.src = "http://openweathermap.org/img/wn/" + data.list[1].weather[0].icon + "@2x.png"
+        forecastEmoji1.src = "http://openweathermap.org/img/wn/" + data.list[5].weather[0].icon + "@2x.png"
         document.getElementById('emoji1').appendChild(forecastEmoji1);
 
-        forecastDate1.innerHTML = data.list[1].dt;
-        forecastTemp1.innerHTML = data.list[1].main.temp + " °F";
-        forecastWind1.innerHTML = data.list[1].wind.speed + " mph";
-        forecastHumidity1.innerHTML = data.list[1].main.humidity + " %";
+        forecastDate1.innerHTML = moment.unix(data.list[5].dt).format("dddd, MMMM Do YYYY");
+        forecastTemp1.innerHTML = data.list[5].main.temp + " °F";
+        forecastWind1.innerHTML = data.list[5].wind.speed + " mph";
+        forecastHumidity1.innerHTML = data.list[5].main.humidity + " %";
 
         var forecastDate2 = document.querySelector("#date2");
         var forecastTemp2 = document.querySelector("#temp2");
@@ -124,13 +124,13 @@ function getForecast(city) {
         var forecastHumidity2 = document.querySelector("#humidity2");
 
         var forecastEmoji2 = document.createElement('img');
-        forecastEmoji2.src = "http://openweathermap.org/img/wn/" + data.list[2].weather[0].icon + "@2x.png"
+        forecastEmoji2.src = "http://openweathermap.org/img/wn/" + data.list[13].weather[0].icon + "@2x.png"
         document.getElementById('emoji2').appendChild(forecastEmoji2);
 
-        forecastDate2.innerHTML = data.list[2].dt;
-        forecastTemp2.innerHTML = data.list[2].main.temp + " °F";
-        forecastWind2.innerHTML = data.list[2].wind.speed + " mph";
-        forecastHumidity2.innerHTML = data.list[2].main.humidity + " %";
+        forecastDate2.innerHTML = moment.unix(data.list[13].dt).format("dddd, MMMM Do YYYY");
+        forecastTemp2.innerHTML = data.list[13].main.temp + " °F";
+        forecastWind2.innerHTML = data.list[13].wind.speed + " mph";
+        forecastHumidity2.innerHTML = data.list[13].main.humidity + " %";
 
         var forecastDate3 = document.querySelector("#date3");
         var forecastTemp3 = document.querySelector("#temp3");
@@ -138,13 +138,13 @@ function getForecast(city) {
         var forecastHumidity3 = document.querySelector("#humidity3");
 
         var forecastEmoji3 = document.createElement('img');
-        forecastEmoji3.src = "http://openweathermap.org/img/wn/" + data.list[3].weather[0].icon + "@2x.png"
+        forecastEmoji3.src = "http://openweathermap.org/img/wn/" + data.list[21].weather[0].icon + "@2x.png"
         document.getElementById('emoji3').appendChild(forecastEmoji3);
 
-        forecastDate3.innerHTML = data.list[3].dt;
-        forecastTemp3.innerHTML = data.list[3].main.temp + " °F";
-        forecastWind3.innerHTML = data.list[3].wind.speed + " mph";
-        forecastHumidity3.innerHTML = data.list[3].main.humidity + " %";
+        forecastDate3.innerHTML = moment.unix(data.list[21].dt).format("dddd, MMMM Do YYYY");
+        forecastTemp3.innerHTML = data.list[21].main.temp + " °F";
+        forecastWind3.innerHTML = data.list[21].wind.speed + " mph";
+        forecastHumidity3.innerHTML = data.list[21].main.humidity + " %";
 
         var forecastDate4 = document.querySelector("#date4");
         var forecastTemp4 = document.querySelector("#temp4");
@@ -152,13 +152,13 @@ function getForecast(city) {
         var forecastHumidity4 = document.querySelector("#humidity4");
 
         var forecastEmoji4 = document.createElement('img');
-        forecastEmoji4.src = "http://openweathermap.org/img/wn/" + data.list[4].weather[0].icon + "@2x.png"
+        forecastEmoji4.src = "http://openweathermap.org/img/wn/" + data.list[29].weather[0].icon + "@2x.png"
         document.getElementById('emoji4').appendChild(forecastEmoji4);
 
-        forecastDate4.innerHTML = data.list[4].dt;
-        forecastTemp4.innerHTML = data.list[4].main.temp + " °F";
-        forecastWind4.innerHTML = data.list[4].wind.speed + " mph";
-        forecastHumidity4.innerHTML = data.list[4].main.humidity + " %";
+        forecastDate4.innerHTML = moment.unix(data.list[29].dt).format("dddd, MMMM Do YYYY");
+        forecastTemp4.innerHTML = data.list[29].main.temp + " °F";
+        forecastWind4.innerHTML = data.list[29].wind.speed + " mph";
+        forecastHumidity4.innerHTML = data.list[29].main.humidity + " %";
 
         var forecastDate5 = document.querySelector("#date5");
         var forecastTemp5 = document.querySelector("#temp5");
@@ -166,13 +166,13 @@ function getForecast(city) {
         var forecastHumidity5 = document.querySelector("#humidity5");
 
         var forecastEmoji5 = document.createElement('img');
-        forecastEmoji5.src = "http://openweathermap.org/img/wn/" + data.list[5].weather[0].icon + "@2x.png"
+        forecastEmoji5.src = "http://openweathermap.org/img/wn/" + data.list[37].weather[0].icon + "@2x.png"
         document.getElementById('emoji5').appendChild(forecastEmoji5);
 
-        forecastDate5.innerHTML = data.list[5].dt;
-        forecastTemp5.innerHTML = data.list[5].main.temp + " °F";
-        forecastWind5.innerHTML = data.list[5].wind.speed + " mph";
-        forecastHumidity5.innerHTML = data.list[5].main.humidity + " %";
+        forecastDate5.innerHTML = moment.unix(data.list[37].dt).format("dddd, MMMM Do YYYY");
+        forecastTemp5.innerHTML = data.list[37].main.temp + " °F";
+        forecastWind5.innerHTML = data.list[37].wind.speed + " mph";
+        forecastHumidity5.innerHTML = data.list[37].main.humidity + " %";
 
     });
 };
