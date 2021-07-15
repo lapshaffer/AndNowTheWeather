@@ -3,7 +3,6 @@
     // Upon second button click, new city is added to string rather than on its own line
     // Upon second button click, second emoji is appended after first, leaving two emojis
     // Dates currently listed as Unix codes
-    // UV index color not yet appearing
 
 var searchBar = document.querySelector('#input-group');
 var citySearch = document.querySelector('#form1')
@@ -78,6 +77,20 @@ function getUVI(lat, lon) {
     .then(function (data) {
         console.log(data);
         currentUV.innerHTML = data.current.uvi;
+
+        if (data.current.uvi < 3) {
+            currentUV.classList.add("badge-success");
+            currentUV.classList.remove("badge-warning");
+            currentUV.classList.remove("badge-danger");
+        } else if (3 < data.current.uvi < 8) {
+            currentUV.classList.add("badge-warning");
+            currentUV.classList.remove("badge-success");
+            currentUV.classList.remove("badge-danger");
+        } else {
+            currentUV.classList.add("badge-warning");
+            currentUV.classList.remove("badge-success");
+            currentUV.classList.remove("badge-warning");
+        };
     });
 };
 
