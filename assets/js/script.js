@@ -16,6 +16,7 @@
 var searchBar = document.querySelector('#input-group');
 var citySearch = document.querySelector('#form1')
 var cityName = document.querySelector('#city');
+var currentEmoji = document.querySelector('#currentEmoji');
 var currentTemp = document.querySelector('#temp');
 var currentWind = document.querySelector('#wind');
 var currentHumidity = document.querySelector('#humidity');
@@ -68,6 +69,10 @@ function handleSearchFormSubmit(event) {
         currentTemp.innerHTML = data.main.temp;
         currentWind.innerHTML = data.wind.speed;
         currentHumidity.innerHTML = data.main.humidity;
+
+        var emoji = document.createElement('img');
+        emoji.src = "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png"
+        document.getElementById('currentEmoji').appendChild(emoji); 
     });
 };
 
