@@ -74,3 +74,11 @@ You are required to submit BOTH of the following for review:
 * The URL of the functional, deployed application.
 
 * The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
+
+## Submission
+
+Deployed App: https://lapshaffer.github.io/AndNowTheWeather/
+
+GitHub Repo: https://github.com/lapshaffer/AndNowTheWeather
+
+Screenshot: ![DeployedWeatherDashboardShaffer](DeployedAppShaffer.png)
