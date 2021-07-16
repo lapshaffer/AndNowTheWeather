@@ -1,6 +1,9 @@
 // Current fixes needed! -
     // Local storage only being stored per session
-    // Upon second button click, new city is added to string rather than on its own line
+    // Upon second button click, new city is added to string rather than on its own line as a list element
+
+// To-dos:
+    // Make Recent Searches clickable once they're a list and not a string
 
 var searchBar = document.querySelector('#input-group');
 var citySearch = document.querySelector('#form1')
@@ -16,9 +19,7 @@ var saveBtn = document.querySelector('#save-btn');
 
 var apiKey = "9c1c9bc50fd04a36296ec59a79ae6f60";
 
-// Local storage
-    // Cities that have been searched for this session are stored in the sidebar and can be clicked to search for them again
-    // Buttons for recently searched cities
+// Local storage- currently not functional
 function writeRecentSearches() {
     var lastCity = localStorage.getItem("lastCity");
     recentSearches.innerHTML = lastCity;
@@ -36,8 +37,6 @@ saveBtn.addEventListener("click", function(event) {
 
 // Search bar functionality
     // When a city is entered, the weather data for that city is pulled and displayed on the screen
-    // Event listener for button
-    // Fetch requests to OpenWeather API
 
 // retrieves current weather data
 function handleSearchFormSubmit(event) {
