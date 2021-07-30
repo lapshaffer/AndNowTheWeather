@@ -19,19 +19,24 @@ var saveBtn = document.querySelector('#save-btn');
 
 var apiKey = "9c1c9bc50fd04a36296ec59a79ae6f60";
 
-// Local storage- currently not functional
+// Local storage- kind of working!
 function writeRecentSearches() {
-    var lastCity = localStorage.getItem("lastCity");
-    recentSearches.innerHTML = lastCity;
+    var lastCity = JSON.parse(localStorage.getItem("city"));
+    var li = document.createElement("li");
+    li.innerHTML = lastCity;
+    recentSearches.append(li);
 };
 
-var recentCities = [];
+writeRecentSearches();
 
+let recentCities = JSON.parse(localStorage.getItem('allCities')) || [];
+//console.log(recentCities);
 saveBtn.addEventListener("click", function(event) {
     event.preventDefault();
     var city = document.querySelector("#form1").value;
+    localStorage.setItem("city", JSON.stringify(city));
     recentCities.push(city);
-    localStorage.setItem("lastCity", recentCities);
+    localStorage.setItem('allCities', JSON.stringify(recentCities));
     writeRecentSearches();
 });
 
@@ -85,7 +90,7 @@ function getUVI(lat, lon) {
             currentUV.classList.remove("badge-success");
             currentUV.classList.remove("badge-danger");
         } else {
-            currentUV.classList.add("badge-warning");
+            currentUV.classList.add("badge-danger");
             currentUV.classList.remove("badge-success");
             currentUV.classList.remove("badge-warning");
         };
